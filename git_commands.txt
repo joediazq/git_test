@@ -1,0 +1,6 @@
+git init (initializes repository locally on folder pwd)
+git status (checks for changes on repository)
+git add .  (adds all files in git repository)
+git commit -m "<commit name>" (commits changes to master branch)
+git log --oneline (IDs all commits that you can go back to)
+git checkout <hash#> <filename> (goes back to that commit. ei: git checkout 9fa8cf5 index.html)
