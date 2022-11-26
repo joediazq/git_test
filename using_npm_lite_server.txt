@@ -1,1 +1,21 @@
-We use npm init to initialize the package.json and there we add in the scripting to use. To run from CLI, we write in this case: "npm start" and it will open the "main" described in a browser. It's using the lite-server as a web server
+MACOS - INSTALL NODE WITH NVM
+
+If you have never installed Node before, or you have already installed a version of Node previously without using NVM, follow these instructions.
+If you have installed Node before using NVM, and you wish to update to a different version, see below for the MACOS - UPDATE NODE WITH NVM instructions.
+For macOS, we recommend the use of a Node version manager tool called NVM to install Node.
+Make sure you have followed the steps at the top of this page to set bash as your default shell.
+Then enter the following command into your bash terminal: 
+touch ~/.bash_profile
+Next, enter the following command into your terminal:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+If you see an error message that "xcode-select: note: no developer tools were found", or "Profile not found", visit the Troubleshooting FAQ.
+Close your terminal window. If using the VS Code integrated terminal, you must use the trash can icon to close your terminal, not the "X" symbol.
+Open another terminal window and in it, enter the below commands to install and use Node 16.13.2.
+nvm install 16.13.2
+nvm use 16.13.2
+
+
+NVM is a package manager for NODE...after doing the above then we can use npm (Node Package Manager) to initialize a javascript application:
+
+We use "npm init" to initialize the package.json and there we add in the scripting to use. To run from CLI, we write in this case: "npm start" and it will open the "main" described in a browser. It's using the lite-server as a web server
+
