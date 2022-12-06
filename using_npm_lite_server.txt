@@ -19,3 +19,29 @@ NVM is a package manager for NODE...after doing the above then we can use npm (N
 
 We use "npm init" to initialize the package.json and there we add in the scripting to use. To run from CLI, we write in this case: "npm start" and it will open the "main" described in a browser. It's using the lite-server as a web server
 
+Install an NPM Module
+You will now install an NPM module, lite-server, that allows you to run a lightweight, Node.js-based development web server and serve up your project files. It is a mock web server to use for testing during development, not a real web server. To install it, enter the command shown below into your VS Code integrated terminal, making sure to be in your git-test folder. (It is intentional that no version number is given for this installation.)
+npm install lite-server --save-dev
+NOTE: It is intentional that there is no version number given for lite-server. Not using the version number will result in the latest available version being installed, which is what we want in this case. 
+NOTE: the --save-dev flag means that lite-server is being installed as a development dependency, which means that later, when you build your project for deployment, it will not be included in the final build files, since it is only needed during development. 
+You can check out more documentation on lite-server here.
+Next, open package.json in your editor and modify it as shown below.  
+{
+  "name": "git-test",
+  "version": "1.0.0",
+  "description": "Git and NPM",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
